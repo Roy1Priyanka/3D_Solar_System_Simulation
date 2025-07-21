@@ -1,4 +1,4 @@
-// 🌌 SETUP
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(
   75,
@@ -10,7 +10,6 @@ const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById("sola
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setClearColor(0x0d0d1f);
 
-// 🌠 STARFIELD BACKGROUND
 function addStars(count) {
   const starGeometry = new THREE.BufferGeometry();
   const positions = [];
@@ -27,7 +26,6 @@ function addStars(count) {
 }
 addStars(1000);
 
-// ☀️ SUN
 const sunGeometry = new THREE.SphereGeometry(2, 32, 32);
 const sunMaterial = new THREE.MeshStandardMaterial({
   color: 0xffd700,
@@ -37,7 +35,7 @@ const sunMaterial = new THREE.MeshStandardMaterial({
 const sun = new THREE.Mesh(sunGeometry, sunMaterial);
 scene.add(sun);
 
-// 💡 LIGHTS
+
 const pointLight = new THREE.PointLight(0xffffff, 3, 300);
 pointLight.position.set(0, 0, 0);
 scene.add(pointLight);
@@ -45,12 +43,11 @@ scene.add(pointLight);
 const ambientLight = new THREE.AmbientLight(0x404040, 0.5);
 scene.add(ambientLight);
 
-// 🎥 CAMERA
+
 camera.position.set(0, 10, 35);
 camera.lookAt(0, 0, 0);
 let cameraAngle = 0;
 
-// 📍 LABEL CREATOR
 function createLabel(text) {
   const canvas = document.createElement('canvas');
   const context = canvas.getContext('2d');
@@ -73,7 +70,6 @@ function createLabel(text) {
   return sprite;
 }
 
-// 🪐 PLANET DATA
 const planetData = [
   { name: "Mercury", color: 0x888888, distance: 5, size: 0.3, speed: 4.17 },
   { name: "Venus", color: 0xffcc99, distance: 7, size: 0.5, speed: 1.61 },
@@ -97,7 +93,7 @@ planetData.forEach((planet) => {
   planet.mesh = mesh;
   planet.angle = Math.random() * Math.PI * 2;
 
-  // 🌕 SATURN RING
+
   if (planet.name === "Saturn") {
     const ringGeo = new THREE.RingGeometry(1.2, 1.8, 64);
     const ringMat = new THREE.MeshBasicMaterial({
@@ -111,13 +107,12 @@ planetData.forEach((planet) => {
     planet.mesh.add(ring);
   }
 
-  // 📍 LABEL
+
   const label = createLabel(planet.name);
   planet.label = label;
   scene.add(label);
   planets.push(planet);
 
-  // ➕ ORBIT PATH
   const orbitCurve = new THREE.EllipseCurve(0, 0, planet.distance, planet.distance, 0, 2 * Math.PI);
   const orbitPoints = orbitCurve.getPoints(100);
   const orbitGeometry = new THREE.BufferGeometry().setFromPoints(orbitPoints);
@@ -126,7 +121,6 @@ planetData.forEach((planet) => {
   orbitLine.rotation.x = Math.PI / 2;
   scene.add(orbitLine);
 
-  // 🎛 SPEED CONTROLLER
   const card = document.createElement("div");
   card.className = "planet-card";
   const labelText = document.createElement("div");
@@ -155,7 +149,6 @@ planetData.forEach((planet) => {
   panel.appendChild(card);
 });
 
-// ⏱️ ANIMATION
 const clock = new THREE.Clock();
 function animate() {
   requestAnimationFrame(animate);
@@ -177,7 +170,6 @@ function animate() {
 }
 animate();
 
-// 📱 RESPONSIVE
 window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
