@@ -3,6 +3,7 @@
 This project is a mobile-responsive 3D simulation of the solar system, created using Three.js. It visually represents all eight planets orbiting the Sun with realistic motion, lighting, and interactive controls.
 
 📌 Features
+
 ☀️ Sun at the center with glowing emissive light
 
 🪐 All 8 planets (Mercury to Neptune) with relative sizes and distances
@@ -28,11 +29,13 @@ This project is a mobile-responsive 3D simulation of the solar system, created u
 ✅ No CSS animations used, only JavaScript + Three.js
 
 🧪 Technologies Used
+
 Three.js (WebGL library)
 
 HTML, JavaScript (No frameworks)
 
 📱 Mobile Responsiveness
+
 Canvas resizes dynamically
 
 Speed controller layout adjusts for smaller screens
