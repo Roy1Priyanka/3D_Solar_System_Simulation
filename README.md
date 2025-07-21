@@ -1,32 +1,32 @@
-# 🌌 3D Solar System Simulation
+# 🌌 3D Solar System 
 
 This project is a mobile-responsive 3D simulation of the solar system, created using Three.js. It visually represents all eight planets orbiting the Sun with realistic motion, lighting, and interactive controls.
 
 📌 Features
 
-☀️ Sun at the center with glowing emissive light
+- Sun at the center with glowing emissive light
 
-🪐 All 8 planets (Mercury to Neptune) with relative sizes and distances
+-  All 8 planets (Mercury to Neptune) with relative sizes and distances
 
-🔁 Planetary orbits animated using frame-based logic
+-  Planetary orbits animated using frame-based logic
 
-🎛 Speed Control Panel: Adjust the orbital speed of each planet in real time
+-  Speed Control Panel: Adjust the orbital speed of each planet in real time
 
-🌕 Saturn ring modeled for extra realism
+-  Saturn ring modeled for extra realism
 
-📍 Planet name labels that follow the camera
+-  Planet name labels that follow the camera
 
-🌌 Starfield background created using custom geometry
+-  Starfield background created using custom geometry
 
-🌀 Orbit rings drawn for each planet
+-  Orbit rings drawn for each planet
 
-💡 Realistic lighting: Ambient and point light from the sun
+-  Realistic lighting: Ambient and point light from the sun
 
-🎥 Camera orbit animation around the solar system
+-  Camera orbit animation around the solar system
 
-📱 Fully responsive design: works on all screen sizes
+-  Fully responsive design: works on all screen sizes
 
-✅ No CSS animations used, only JavaScript + Three.js
+-  No CSS animations used, only JavaScript + Three.js
 
 🧪 Technologies Used
 
