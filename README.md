@@ -41,4 +41,4 @@ Canvas resizes dynamically
 Speed controller layout adjusts for smaller screens
 
 🚀 **Live Demo**:  
-🔗 [https://solar-system-simulation.netlify.app](https://solar-system-simulation.netlify.app)
+🔗 [https://solar-system-simulation.netlify.app](https://3d-solarsystemsimulation.netlify.app/)
